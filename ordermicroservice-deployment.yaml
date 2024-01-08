@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ordermicroservice-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ordermicroservice
+  template:
+    metadata:
+      labels:
+        app: ordermicroservice
+    spec:
+      containers:
+        - name: ordermicroservice
+          image: pavankumarsangisetti/usermicroservice:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
