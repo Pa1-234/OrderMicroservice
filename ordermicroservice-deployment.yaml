@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ordermicroservice
-          image: pavankumarsangisetti/usermicroservice:latest
+          image: pavankumarsangisetti/ordermicroservice:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
